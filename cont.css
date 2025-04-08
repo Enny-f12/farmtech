@@ -1,0 +1,822 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary:#008000;
+    --background:#00800004;
+}
+
+body{
+    background-color: #00800009;
+}
+
+/* Navbar styles */
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    gap: 135px;
+    align-items: center;
+    background:white;
+    color: black;
+    padding: auto;
+    padding-left: 84px;
+    font-family:poppins;
+    width: 100%;
+    position: fixed;
+    margin-top: -80px;
+    height: 84px;
+}
+.navbar .im{
+    width: 17%;
+
+}
+.navbar img{
+    width: 100%;
+    
+
+}
+
+/* Navigation links */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 94px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+}
+.nav-links a:hover{
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 16px;
+}
+.menu-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Responsive: Hide menu on small screens */
+
+@media (max-width: 900px) {
+    .menu-btn {
+        display: block; /* Show menu button */
+    }
+
+    .nav-links {
+        display: none; /* Hide links */
+        flex-direction: column;
+        background:white;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 16px 0;
+        text-align: center;
+        color: black;
+        font-size: 16px;
+        gap: 64px;
+    }
+    
+    
+    .nav-links.show-menu {
+        display: flex; /* Show menu when class is added */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background:white;
+        color: black;
+        padding: 10px 16px;
+        margin-left: 0;
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--background);
+    padding: 109px 124px;
+    align-items: center;
+    gap: 48px;
+    
+}
+.content .first{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+}
+.content .first h1{
+    font-size: 40px;
+    letter-spacing: -1.2px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    width: 100%;
+    line-height: 64px;
+}
+.content .first p{
+    color: #3C4049;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.27px;
+    margin-bottom: 17px;
+    line-height: 32px;
+}
+.second {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.second .email{
+    padding: 24px;
+    color: #9EA2AD;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+.second form{
+    background-color:#04a00403;
+    
+}
+.second .message{
+    padding-top: 24px;
+    padding-bottom: 140px;
+    padding-left: 24px;
+    color: #9EA2AD;
+    background-color: white;
+    width: 100%;
+    
+    border-radius: 8px;
+}
+
+.second .button a{
+    display: flex;
+    padding: 20px 0px;
+    text-decoration: none;
+    color:white;
+    list-style: none;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #008000;
+    width: 100%;
+    border-radius: 32px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+
+
+}
+
+.i{
+    background-image: url("./images/Rectangle\ 20.png");
+    background-color: #666769;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 80px;
+    height: 60vh;
+}
+@media(max-width:900px){
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--background);
+        padding: 32px 56px;
+        align-items: center;
+        gap: 48px;
+        
+    }
+    .content .first{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 24px;
+    }
+    .content .first h1{
+        font-size: 30px;
+        letter-spacing: -1.2px;
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        width: 100%;
+        line-height: 50px;
+    }
+    .content .first p{
+        color: #3C4049;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.27px;
+        margin-bottom: 17px;
+        line-height: 32px;
+    }
+    .second {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+    }
+    .second .email{
+        padding: 24px;
+        color: #9EA2AD;
+        background-color: white;
+        width: 100%;
+        margin-bottom: 24px;
+        border-radius: 8px;
+    }
+    .second form{
+        background-color:#04a00403;
+        
+    }
+    .second .message{
+        padding-top: 24px;
+        padding-bottom: 140px;
+        padding-left: 24px;
+        color: #9EA2AD;
+        background-color: white;
+        width: 100%;
+        
+        border-radius: 8px;
+    }
+    
+    .second .button a{
+        display: flex;
+        padding: 12px 0px;
+        text-decoration: none;
+        color:white;
+        list-style: none;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: #008000;
+        width: 70%;
+        border-radius: 32px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        margin: auto;
+    
+    
+    }
+    
+    .image{
+        width: 100%;
+        margin-top: 80px;
+        
+        
+    
+    }
+    .image img{
+        width: 100%;
+        color: black;
+        mix-blend-mode: multiply; 
+        opacity: 0.75;
+        height: 30vh;
+    }
+    .image img::before{
+    color: black;
+    z-index: 1000;
+    }
+    
+}
+
+@media(max-width:480px){
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--background);
+        padding: 32px 16px;
+        align-items: center;
+        gap: 48px;
+        
+    }
+    .content .first{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 24px;
+    }
+    .content .first h1{
+        font-size: 32px;
+        letter-spacing: -1.2px;
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        width: 100%;
+        line-height: 50px;
+    }
+    .content .first p{
+        color: #3C4049;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.27px;
+        margin-bottom: 17px;
+        line-height: 32px;
+    }
+    .second {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .second .email{
+        padding: 24px;
+        color: #9EA2AD;
+        background-color: white;
+        width: 100%;
+        margin-bottom: 24px;
+        border-radius: 8px;
+    }
+    .second form{
+        background-color:#04a00403;
+        
+    }
+    .second .message{
+        padding-top: 24px;
+        padding-bottom: 140px;
+        padding-left: 24px;
+        color: #9EA2AD;
+        background-color: white;
+        width: 100%;
+        
+        border-radius: 8px;
+    }
+    
+    .second .button a{
+        display: flex;
+        padding: 12px 0px;
+        text-decoration: none;
+        color:white;
+        list-style: none;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: #008000;
+        width: 100%;
+        border-radius: 32px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+    
+    
+    }
+    
+    .image{
+        width: 100%;
+        margin-top: 80px;
+        
+        
+    
+    }
+    .image img{
+        width: 100%;
+        color: black;
+        mix-blend-mode: multiply; 
+        opacity: 0.75;
+        height: 30vh;
+    }
+    .image img::before{
+    color: black;
+    z-index: 1000;
+    }
+    
+}
+
+
+
+footer{
+    background-color: black;
+    padding: 120px 226px;
+    color: white;
+}
+.first_column{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 56px;
+}
+.company_details{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.company_details img{
+width: 30%;
+height: 15vh;
+}
+.company_details p{
+    font-family: "Inter", sans-serif;
+    font-size: 14.5px;
+    color: #9EA2AD;
+    letter-spacing: -0.08px;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+}
+.info p{
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 32px;
+    padding: 12px;
+}
+.your_mail{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+.your_mail p{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+form{
+    background-color: black;
+    
+    
+}
+input{
+    background-color: black;
+    border: 1px solid rgba(255, 255, 255, 0.043);
+    padding: 12px;
+    width: 270px;
+}
+input:hover{
+    border: 1px solid #008000;
+}
+.your_mail button{
+    background-color: #008000;
+    border: none;
+    font-weight: bold;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 32px;
+
+}
+footer hr{
+   background-color: #008000;
+   height: 1px;
+   border: none;
+}
+.third_column{
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+
+}
+.third_column .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 50%;
+}
+.third_column .items{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+    
+}
+.third_column .products{
+    width: 110px;
+    
+
+}
+.third_column .products a{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color:#9EA2AD;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.third_column .products li{
+    list-style: none;
+    font-size: 14px;
+    margin: 20px auto;
+}
+.third_column .products h3{
+    margin-bottom: 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+.fourth_column{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    margin-top: 56px;
+    justify-content: right;
+    text-align: right;
+    font-weight: 200;
+}
+
+@media(max-width:900px){
+    footer{
+     background-color: black;
+     padding:60px 56px;
+     color: white;
+     width: 100%;
+ }
+ .first_column{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 56px;
+ }
+ .company_details{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
+ }
+ .company_details img{
+ width: 35%;
+ height: 15vh;
+ margin-bottom: 20px;
+ }
+ .company_details p{
+     font-family: "Inter", sans-serif;
+     font-size: 15px;
+     color: #9EA2AD;
+     letter-spacing: -0.08px;
+ }
+ .info{
+     display: flex;
+     flex-direction: row;
+     gap: 8px;
+ 
+ }
+ .info p{
+     border: 1px solid rgba(255, 255, 255, 0.13);
+     border-radius: 32px;
+     padding: 12px;
+ }
+ .your_mail{
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+     width: 100%;
+ }
+ .your_mail p{
+     font-family: "Inter", sans-serif;
+     font-size: 14px;
+ }
+ form{
+     background-color: black;
+     
+     
+ }
+ input{
+     background-color: black;
+     border: 1px solid rgba(255, 255, 255, 0.043);
+     padding: 12px;
+     width: 100%;
+ }
+ input:hover{
+     border: 1px solid #008000;
+ }
+ .your_mail button{
+     background-color: #008000;
+     border: none;
+     font-weight: bold;
+     color: white;
+     padding: 12px 24px;
+     border-radius: 32px;
+     width: 50%;
+     align-items: center;
+     margin: auto;
+ 
+ }
+ footer hr{
+    background-color: #008000;
+    height: 1px;
+    border: none;
+ }
+ .third_column{
+     margin-top: 56px;
+     display: flex;
+     flex-direction: column;
+     gap: 48px;
+ 
+ }
+ .third_column .icons{
+     display: flex;
+     flex-direction: row;
+     gap: 24px;
+     width: 100%;
+ }
+ .third_column .items{
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     justify-content: space-between;
+ 
+     
+ }
+ 
+ .third_column .products a{
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   text-decoration: none;
+   color:#9EA2AD;
+   list-style: none;
+   font-family: "Inter", sans-serif;
+   font-size: 14px;
+   font-weight: 300;
+ }
+ .third_column .products li{
+     list-style: none;
+     font-size: 14px;
+     margin: 20px auto;
+ }
+ .third_column .products h3{
+     margin-bottom: 12px;
+     font-family: "Inter", sans-serif;
+     font-size: 14px;
+ }
+ .fourth_column{
+     font-family: "Inter", sans-serif;
+     font-size: 14px;
+     margin-top: 56px;
+     justify-content: left;
+     text-align: left;
+     font-weight: 200;
+ 
+ }
+ }
+@media(max-width:480px){
+    footer{
+     background-color: black;
+     padding:60px 16px;
+     color: white;
+     width: 100%;
+ }
+ .first_column{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 56px;
+ }
+ .company_details{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
+ }
+ .company_details img{
+ width: 40%;
+ height: 10vh;
+ margin-bottom: 20px;
+ }
+ .company_details p{
+     font-family: "Inter", sans-serif;
+     font-size: 14px;
+     color: #9EA2AD;
+     letter-spacing: -0.08px;
+ }
+ .info{
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+ 
+ }
+ .info p{
+     border: 1px solid rgba(255, 255, 255, 0.13);
+     border-radius: 32px;
+     padding: 12px;
+ }
+ .your_mail{
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+     width: 100%;
+ }
+ .your_mail p{
+     font-family: "Inter", sans-serif;
+     font-size: 14px;
+ }
+ form{
+     background-color: black;
+     
+     
+ }
+ input{
+     background-color: black;
+     border: 1px solid rgba(255, 255, 255, 0.043);
+     padding: 12px;
+     width: 100%;
+ }
+ input:hover{
+     border: 1px solid #008000;
+ }
+ .your_mail button{
+     background-color: #008000;
+     border: none;
+     font-weight: bold;
+     color: white;
+     padding: 12px 24px;
+     border-radius: 32px;
+     width: 70%;
+     align-items: center;
+     margin: auto;
+ 
+ }
+ footer hr{
+    background-color: #008000;
+    height: 1px;
+    border: none;
+ }
+ .third_column{
+     margin-top: 56px;
+     display: flex;
+     flex-direction: column;
+     gap: 48px;
+ 
+ }
+ .third_column .icons{
+     display: flex;
+     flex-direction: row;
+     gap: 24px;
+     width: 100%;
+ }
+ .third_column .items{
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     justify-content: space-between;
+ 
+     
+ }
+ 
+ .third_column .products a{
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   text-decoration: none;
+   color:#9EA2AD;
+   list-style: none;
+   font-family: "Inter", sans-serif;
+   font-size: 14px;
+   font-weight: 300;
+ }
+ .third_column .products li{
+     list-style: none;
+     font-size: 14px;
+     margin: 20px auto;
+ }
+ .third_column .products h3{
+     margin-bottom: 12px;
+     font-family: "Inter", sans-serif;
+     font-size: 14px;
+ }
+ .fourth_column{
+     font-family: "Inter", sans-serif;
+     font-size: 14px;
+     margin-top: 56px;
+     justify-content: left;
+     text-align: left;
+     font-weight: 200;
+ 
+ }
+ }
