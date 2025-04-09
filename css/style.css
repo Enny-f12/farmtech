@@ -119,7 +119,7 @@
 /* Homepage*/
 @media(min-width:951px){
 .homepage{
-    background-image: url("./images/african-man-harvesting-vegetables\ 1.png");
+    background-image: url("../images/african-man-harvesting-vegetables\ 1.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -195,7 +195,7 @@
 
 @media(max-width:950px){
     .homepage{
-        background-image: url("./images/african-man-harvesting-vegetables\ 1.png");
+        background-image: url("../images/african-man-harvesting-vegetables\ 1.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -270,7 +270,7 @@
 
 @media(max-width:468px){
     .homepage{
-        background-image: url("./images/african-man-harvesting-vegetables\ 1.png");
+        background-image: url("../images/african-man-harvesting-vegetables\ 1.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
