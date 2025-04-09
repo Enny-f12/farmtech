@@ -518,24 +518,24 @@ body{
     
     }
     
-    .image{
+    .image {
         width: 100%;
         margin-top: 80px;
-        
-        
-    
-    }
-    .image img{
+        height: 30vh; /* or any value to control the height */
+        overflow: hidden; /* Hide any excess part of the image */
+      }
+      
+      .image img {
         width: 100%;
-        color: black;
-        mix-blend-mode: multiply; 
+        height: 100%; /* Ensure it covers the full container */
+        object-fit: cover;
+        object-position: 120% center; /* Ensure it's focused on the man */
+        mix-blend-mode: multiply;
         opacity: 0.75;
-        height: 30vh;
-    }
-    .image img::before{
-    color: black;
-    z-index: 1000;
-    }
+      }
+      
+   
+      
     
 }
 
@@ -847,7 +847,7 @@ footer hr{
     background: none;        /* Removes background */
     padding: 0;              /* Removes padding */
     margin: 0;               /* Optional: removes margin */
-    width: 200px;            /* Resize the logo if needed */
+    width: 170px;            /* Resize the logo if needed */
     height: auto;
     object-fit: contain;
  
