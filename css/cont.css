@@ -32,15 +32,17 @@ body{
     margin-top: -80px;
     height: 84px;
 }
-.navbar .im{
-    width: 17%;
-
-}
 .navbar img{
-    width: 100%;
+    background: none;        /* Removes background */
+    padding: 0;              /* Removes padding */
+    margin: 0;               /* Optional: removes margin */
+    width: 200px;            /* Resize the logo if needed */
+    height: auto;
+    object-fit: contain;
     
 
 }
+
 
 /* Navigation links */
 
@@ -77,7 +79,70 @@ body{
 
 
 /* Responsive: Hide menu on small screens */
-
+@media(max-width:1200px){
+    .navbar {
+        display: flex;
+        justify-content: left;
+        gap: 100px;
+        align-items: center;
+        background:white;
+        color: black;
+        padding: auto;
+        padding-left: 24px;
+        font-family:poppins;
+        width: 100%;
+        position: fixed;
+        margin-top: -80px;
+        height: 80px;
+        z-index: 1000;
+    
+    }
+    
+    .navbar img{
+        background: none;        /* Removes background */
+        padding: 0;              /* Removes padding */
+        margin: 0;               /* Optional: removes margin */
+        width: 200px;            /* Resize the logo if needed */
+        height: auto;
+        object-fit: contain;
+        
+    
+    }
+    
+    /* Navigation links */
+    
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 70px;
+    }
+    
+    .nav-links li {
+        display: inline;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+    .nav-links a:hover{
+        text-decoration: none;
+        color: var(--primary);
+        font-size: 16px;
+    }
+    .menu-btn {
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: var(--primary);
+        cursor: pointer;
+        display: none;
+    }
+    
+}
 @media (max-width: 900px) {
     .menu-btn {
         display: block; /* Show menu button */
@@ -111,6 +176,53 @@ body{
         color: black;
         padding: 10px 16px;
         margin-left: 0;
+    }
+}
+@media(max-width:480px){
+    .menu-btn {
+        display: block; /* Show menu button */
+    }
+
+    .nav-links {
+        display: none; /* Hide links */
+        flex-direction: column;
+        background:white;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 16px 0;
+        text-align: center;
+        color: black;
+        font-size: 16px;
+        gap: 64px;
+    }
+    
+    
+    .nav-links.show-menu {
+        display: flex; /* Show menu when class is added */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background:white;
+        color: black;
+        padding: 10px 16px;
+        margin-left: 0;
+        padding-left: 0px;
+    }
+    .navbar img{
+        background: none;        /* Removes background */
+        padding: 0;              /* Removes padding */
+        margin: 0;               /* Optional: removes margin */
+        width: 160px;            /* Resize the logo if needed */
+        height: auto;
+        object-fit: contain;
+        
+        
+    
     }
 }
 
@@ -204,6 +316,18 @@ body{
     background-size: cover;
     margin-top: 80px;
     height: 60vh;
+}
+@media(max-width:1200px){
+    .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--background);
+        padding: 109px 80px;
+        align-items: center;
+        gap: 48px;
+        
+    }
 }
 @media(max-width:900px){
     .content{
@@ -436,8 +560,13 @@ margin-bottom: 56px;
     gap: 12px;
 }
 .company_details img{
-width: 30%;
-height: 15vh;
+    background: none;        /* Removes background */
+    padding: 0;              /* Removes padding */
+    margin: 0;               /* Optional: removes margin */
+    width: 200px;            /* Resize the logo if needed */
+    height: auto;
+    object-fit: contain;
+
 }
 .company_details p{
     font-family: "Inter", sans-serif;
@@ -547,7 +676,13 @@ footer hr{
     text-align: right;
     font-weight: 200;
 }
-
+@media(max-width:1200px){
+    footer{
+        background-color: black;
+        padding: 120px 80px;
+        color: white;
+    }
+}
 @media(max-width:900px){
     footer{
      background-color: black;
@@ -569,9 +704,13 @@ footer hr{
      gap: 12px;
  }
  .company_details img{
- width: 35%;
- height: 15vh;
- margin-bottom: 20px;
+    background: none;        /* Removes background */
+    padding: 0;              /* Removes padding */
+    margin: 0;               /* Optional: removes margin */
+    width: 200px;            /* Resize the logo if needed */
+    height: auto;
+    object-fit: contain;
+ 
  }
  .company_details p{
      font-family: "Inter", sans-serif;
@@ -705,9 +844,13 @@ footer hr{
      gap: 12px;
  }
  .company_details img{
- width: 40%;
- height: 10vh;
- margin-bottom: 20px;
+    background: none;        /* Removes background */
+    padding: 0;              /* Removes padding */
+    margin: 0;               /* Optional: removes margin */
+    width: 200px;            /* Resize the logo if needed */
+    height: auto;
+    object-fit: contain;
+ 
  }
  .company_details p{
      font-family: "Inter", sans-serif;

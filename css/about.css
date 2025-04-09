@@ -33,17 +33,21 @@ body{
     width: 100%;
     margin-top: -84px;
     height: 84px;
-
-}
-.navbar .im{
-    width: 17%;
+    z-index: 1000;
 
 }
 .navbar img{
-    width: 100%;
+    background: none;        /* Removes background */
+    padding: 0;              /* Removes padding */
+    margin: 0;               /* Optional: removes margin */
+    width: 200px;            /* Resize the logo if needed */
+    height: auto;
+    object-fit: contain;
     
 
 }
+
+
 
 
 /* Navigation links */
@@ -80,7 +84,70 @@ body{
 
 
 /* Responsive: Hide menu on small screens */
-
+@media(max-width:1200px){
+    .navbar {
+        display: flex;
+        justify-content: left;
+        gap: 100px;
+        align-items: center;
+        background:white;
+        color: black;
+        padding: auto;
+        padding-left: 24px;
+        font-family:poppins;
+        width: 100%;
+        position: fixed;
+        margin-top: -70px;
+        height: 80px;
+        z-index: 1000;
+    
+    }
+    
+    .navbar img{
+        background: none;        /* Removes background */
+        padding: 0;              /* Removes padding */
+        margin: 0;               /* Optional: removes margin */
+        width: 200px;            /* Resize the logo if needed */
+        height: auto;
+        object-fit: contain;
+        
+    
+    }
+    
+    /* Navigation links */
+    
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 70px;
+    }
+    
+    .nav-links li {
+        display: inline;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+    .nav-links a:hover{
+        text-decoration: none;
+        color: var(--primary);
+        font-size: 16px;
+    }
+    .menu-btn {
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: var(--primary);
+        cursor: pointer;
+        display: none;
+    }
+    
+}
 @media (max-width: 900px) {
     .menu-btn {
         display: block; /* Show menu button */
@@ -116,7 +183,55 @@ body{
         margin-left: 0;
     }
 }
+@media(max-width:480px){
+    .menu-btn {
+        display: block; /* Show menu button */
+    }
 
+    .nav-links {
+        display: none; /* Hide links */
+        flex-direction: column;
+        background:white;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 16px 0;
+        text-align: center;
+        color: black;
+        font-size: 16px;
+        gap: 64px;
+    }
+    
+    
+    .nav-links.show-menu {
+        display: flex; /* Show menu when class is added */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background:white;
+        color: black;
+        padding: 10px 16px;
+        margin-left: 0;
+        padding-left: 0px;
+        margin-top: -84px;
+        
+    }
+    .navbar img{
+        background: none;        /* Removes background */
+        padding: 0;              /* Removes padding */
+        margin: 0;               /* Optional: removes margin */
+        width: 160px;            /* Resize the logo if needed */
+        height: auto;
+        object-fit: contain;
+        
+        
+    
+    }
+}
 /*introduction*/
 .introduction{
     display: flex;
@@ -296,7 +411,7 @@ body{
         height: 70vh;
     }
 }
-@media(max-width:480px){
+@media(max-width:600px){
     .introduction{
         display: flex;
         flex-direction: column;
@@ -306,6 +421,7 @@ body{
         background-color:var(--background);
         margin-top: 84px;
         gap: 48px;
+        padding-bottom:24px;
     }
     .first{
         display: flex;
@@ -326,7 +442,7 @@ body{
         font-size: 28px;
         font-family: "Archivo", sans-serif;
         letter-spacing: -0.88px;
-        line-height: 64px;
+        line-height: 48px;
         font-weight: 500;
     }
     .first h1 span{
@@ -369,6 +485,7 @@ body{
         background-color:var(--background);
         padding-bottom: 56px;
         
+        
     }
     
     .intro_2 p{
@@ -385,7 +502,7 @@ body{
     }
     .intro_2 .imae img{
         width: 100%;
-        height: 80vh;
+        height: 60vh;
     }
 }
 
@@ -411,13 +528,14 @@ body{
 }
 .stand .text h1{
     font-size: 32px;
-    width: 480px;
+
     background-color:var(--h1);
     border-radius: 6px;
     letter-spacing: -1.2px;
     font-family: "Archivo", sans-serif;
     font-weight: 500;
     padding: 7px 4px;
+    
 }
 .stand .text p{
     color: #3C4049;
@@ -616,7 +734,7 @@ body{
     
     }
     .pic .im img{
-        width: 100%;
+        width: 85%;
         border-radius: 16px;
         height: 60vh;
     }
@@ -630,8 +748,22 @@ body{
     
     
 }
-
-@media(max-width:480px){
+@media(max-width:700px){
+    .pic .im{
+        width: 80%;
+        margin-top: 44px;
+    
+        border-radius: 16px;
+        margin: auto;
+    
+    }
+    .pic .im img{
+        width: 91%;
+        border-radius: 16px;
+        height: 60vh;
+    }
+}
+@media(max-width:550px){
     .stand{
         padding: 0px 16px;
         width: 100%;
@@ -652,13 +784,14 @@ body{
     }
     .stand .text h1{
         font-size: 28px;
-        width: 100%;
+        width: 90%;
         background-color:var(--h1);
         border-radius: 6px;
         letter-spacing: -0.88px;
         font-family: "Archivo", sans-serif;
         font-weight: 500;
         padding: 7px 4px;
+        line-height: 36px;
     }
     .stand .text p{
         color: #3C4049;
@@ -680,7 +813,6 @@ body{
         display: flex;
         flex-direction: column;
         gap: 16px;
-        margin-top: -50px;
         
         
     }
@@ -755,7 +887,32 @@ body{
     
     
 }
-
+@media(max-width:440px){
+    .card1{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        flex-wrap: wrap;
+        
+        
+    
+    }
+    .card11{
+        border: 1px solid #00800011;
+        width:80%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
+        border-radius: 16px;
+margin:auto
+        
+    }
+      
+}
 
 
 
@@ -902,7 +1059,7 @@ color: black;
     }
 }
 
-@media(max-width:480px){
+@media(max-width:550px){
     .choose{
         background-color: var(--background);
         padding: 0px 16px;
@@ -939,7 +1096,7 @@ color: black;
     }
     .choose .flex{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 24px;
@@ -948,7 +1105,7 @@ color: black;
         display: flex;
         flex-direction: column;
         gap: 16px;
-        width: 47%;
+        width: 100%;
     }
     .choose .flex1 img{
         width:56px;
@@ -1038,7 +1195,67 @@ color: black;
     color: white;
         background-color:black;
 }
-
+@media(max-width:720px){
+    .join{
+        background-color:var(--background);
+        padding: 0px 56px;
+        display: flex;
+        flex-direction: column;
+        gap:24px;
+    }
+    .join p{
+        font-family: "Inter", sans-serif;
+        font-size: 17px;
+        font-weight: 400 ;
+        line-height: 24px;
+        letter-spacing: -0.08px;
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+      margin: auto;
+    }
+    .buttons{
+        display: flex;
+        gap: 12px;
+        margin: auto;
+        font-family: "Inter", sans-serif;
+        margin-bottom: 162px;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+    }
+    .buttons .a{
+        color:#008000;
+        border: 1px solid #008000;
+        font-weight: 600;
+        padding: 12px 0px;
+        text-decoration: none;
+        border-radius: 32px;
+        width: 80%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .buttons .a:hover{
+        color: white;
+        background-color: #008000;
+    }
+    .buttons .b{
+        color:white;
+        background-color: #008000;
+        font-weight: 600;
+        padding: 12px 0px;
+        text-decoration: none;
+        border-radius: 32px;
+        width: 80%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .buttons .b:hover{
+        color: white;
+            background-color:black;
+    }
+    
+}
 @media(max-width:480px){
     .join{
         background-color:var(--background);
@@ -1057,11 +1274,11 @@ color: black;
     }
     .join p{
         font-family: "Inter", sans-serif;
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 400 ;
         line-height: 24px;
         letter-spacing: -0.08px;
-        width: 80%;
+        width: 90%;
         text-align: center;
         justify-content: center;
       margin: auto;
@@ -1143,8 +1360,14 @@ margin-bottom: 56px;
     gap: 12px;
 }
 .company_details img{
-width: 30%;
-height: 15vh;
+    background: none;        /* Removes background */
+    padding: 0;              /* Removes padding */
+    margin: 0;               /* Optional: removes margin */
+    width: 200px;            /* Resize the logo if needed */
+    height: auto;
+    object-fit: contain;
+ 
+
 }
 .company_details p{
     font-family: "Inter", sans-serif;
@@ -1249,6 +1472,13 @@ footer hr{
     text-align: right;
     font-weight: 200;
 }
+@media(max-width:1200px){
+    footer{
+        background-color: black;
+        padding: 120px 80px;
+        color: white;
+    }
+}
 @media(max-width:900px){
     footer{
      background-color: black;
@@ -1270,9 +1500,14 @@ footer hr{
      gap: 12px;
  }
  .company_details img{
- width: 35%;
- height: 15vh;
- margin-bottom: 20px;
+    background: none;        /* Removes background */
+    padding: 0;              /* Removes padding */
+    margin: 0;               /* Optional: removes margin */
+    width: 200px;            /* Resize the logo if needed */
+    height: auto;
+    object-fit: contain;
+ 
+ 
  }
  .company_details p{
      font-family: "Inter", sans-serif;
@@ -1407,9 +1642,14 @@ footer hr{
      gap: 12px;
  }
  .company_details img{
- width: 40%;
- height: 10vh;
- margin-bottom: 20px;
+    background: none;        /* Removes background */
+    padding: 0;              /* Removes padding */
+    margin: 0;               /* Optional: removes margin */
+    width: 200px;            /* Resize the logo if needed */
+    height:auto;
+    object-fit: contain;
+ 
+ 
  }
  .company_details p{
      font-family: "Inter", sans-serif;
