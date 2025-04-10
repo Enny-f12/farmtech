@@ -11,4 +11,18 @@ menuBtn.addEventListener("click", () => {
     : "&#9776;";  // ☰ Menu Icon
      });
 
-     
+     const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting){
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+    
+        });
+    });
+    const hiddenElements = document.querySelectorAll('.hidden, .overflow, .icon, .hidd, .hidde');
+    hiddenElements.forEach((el) => observer.observe(el));
+    
+        
