@@ -339,7 +339,7 @@
     width: 40%;
  }
  .flexp a{
-    padding: 8px 16px;
+    padding: 12px 16px;
     background-color:var(--h1);
     color: #008000;
     text-decoration: none;
@@ -348,6 +348,13 @@
     border-radius: 32px;
     font-weight: 400;
     font-size: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+ }
+ .flexp a:hover{
+    background-color: white;
+    transform: scale(1.05);
+    border: 1px solid #008000;
  }
  .flexp i{
     padding: 2px 3px;
@@ -627,7 +634,7 @@
     margin-top: -30px;
 }
 .climate .content .items a{
-    padding: 8px 16px;
+    padding: 12px 16px;
     background-color: #008000;
     color:white;
     text-decoration: none;
@@ -641,8 +648,16 @@
     flex-direction: row;
     justify-content: center;
     width: 20%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 1s ease;
+    cursor: pointer;
     
     
+}
+.climate .content .items a:hover{
+background-color: white;
+color: #008000;
+
 }
 .climate .content i{
     padding: 2px 3px;
@@ -996,7 +1011,7 @@
     
 }
  .content a{
-    padding: 8px 16px;
+    padding: 12px 16px;
     background-color: #008000;
     color:white;
     text-decoration: none;
@@ -1009,8 +1024,16 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 1s ease;
+    cursor: pointer;
 
     
+}
+.content a:hover{
+background-color: white;
+color: #008000;
+
 }
  .content i{
     padding: 2px 3px;
@@ -1018,6 +1041,9 @@
     border-radius: 100%;
     font-size: 10px;
     
+}
+.content i:hover{
+border: 1px solid #008000;
 }
 @media(max-width:1200px){
     .livestock{
@@ -1369,12 +1395,23 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 1s ease;
+    cursor: pointer;
 }
 .pre-footer .content a i{
     padding: 2px 3px;
     border: 1.5px solid black;
     border-radius: 100%;
     font-size: 12px;
+}
+.pre-footer .content a i:hover{
+border: 1.5px solid #008000;
+}
+.pre-footer .content a:hover{
+border: 2px solid #008000;
+transform: scale(1.05);
+color: #008000;
 }
 .pre-footer .content{
     width: 60%;
@@ -1595,7 +1632,6 @@ footer{
     background-color: black;
     padding: 120px 226px;
     color: white;
-    margin-top: -12px;
 }
 .first_column{
 display: flex;
@@ -1617,6 +1653,7 @@ margin-bottom: 56px;
     width: 200px;            /* Resize the logo if needed */
     height: auto;
     object-fit: contain;
+ 
 
 }
 .company_details p{
@@ -1660,14 +1697,28 @@ input{
 input:hover{
     border: 1px solid #008000;
 }
-.your_mail button{
+.your_mail  a{
     background-color: #008000;
     border: none;
-    font-weight: bold;
+    font-weight: 500;
     color: white;
     padding: 12px 24px;
     border-radius: 32px;
+    transition: all 1s ease;
+    cursor:pointer;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    align-items: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
 
+}
+.your_mail a:hover{
+    transform:scale(1.05);
+    background-color: white;
+    border: 1.5px solid #008000;
+    color: #008000;
 }
 footer hr{
    background-color: #008000;
@@ -1685,12 +1736,21 @@ footer hr{
     flex-direction: row;
     gap: 24px;
     width: 50%;
+    font-size: 20px;
+}
+.third_column .icons a{
+    cursor: pointer;
+transition: all 1s ease;
+}
+.third_column .icons a:hover{
+    transform: scale(1.05);
 }
 .third_column .items{
     display: flex;
     flex-direction: row;
     width: 50%;
     justify-content: space-between;
+    
 }
 
 .third_column .products a{
@@ -1713,7 +1773,6 @@ footer hr{
     margin-bottom: 12px;
     font-family: "Inter", sans-serif;
     font-size: 14px;
-    color: white;
 }
 .fourth_column{
     font-family: "Inter", sans-serif;
@@ -1722,6 +1781,19 @@ footer hr{
     justify-content: right;
     text-align: right;
     font-weight: 200;
+}
+.fa-linkedin-in{
+color: white;
+
+}
+
+.fa-whatsapp{
+    color:#075E54;
+}
+.fa-instagram{
+
+color: #C32AA3;
+
 }
 @media(max-width:1200px){
     footer{
@@ -1757,6 +1829,7 @@ footer hr{
     width: 200px;            /* Resize the logo if needed */
     height: auto;
     object-fit: contain;
+ 
  
  }
  .company_details p{
@@ -1800,7 +1873,7 @@ footer hr{
  input:hover{
      border: 1px solid #008000;
  }
- .your_mail button{
+ .your_mail a{
      background-color: #008000;
      border: none;
      font-weight: bold;
@@ -1810,6 +1883,9 @@ footer hr{
      width: 50%;
      align-items: center;
      margin: auto;
+     transition: all 1s ease;
+     cursor:pointer;
+     text-decoration: none;
  
  }
  footer hr{
@@ -1870,143 +1946,157 @@ footer hr{
  
  }
  }
+
 @media(max-width:480px){
-    footer{
-     background-color: black;
-     padding:60px 16px;
-     color: white;
-     width: 100%;
- }
- .first_column{
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- align-items: center;
- margin-bottom: 56px;
- }
- .company_details{
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     gap: 12px;
- }
- .company_details img{
+   footer{
+    background-color: black;
+    padding:60px 16px;
+    color: white;
+    width: 100%;
+}
+.first_column{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 56px;
+}
+.company_details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.company_details img{
     background: none;        /* Removes background */
     padding: 0;              /* Removes padding */
     margin: 0;               /* Optional: removes margin */
     width: 170px;            /* Resize the logo if needed */
     height: auto;
     object-fit: contain;
- 
- }
- .company_details p{
-     font-family: "Inter", sans-serif;
-     font-size: 14px;
-     color: #9EA2AD;
-     letter-spacing: -0.08px;
- }
- .info{
-     display: flex;
-     flex-direction: column;
-     gap: 8px;
- 
- }
- .info p{
-     border: 1px solid rgba(255, 255, 255, 0.13);
-     border-radius: 32px;
-     padding: 12px;
- }
- .your_mail{
-     display: flex;
-     flex-direction: column;
-     gap: 16px;
-     width: 100%;
- }
- .your_mail p{
-     font-family: "Inter", sans-serif;
-     font-size: 14px;
- }
- form{
-     background-color: black;
-     
-     
- }
- input{
-     background-color: black;
-     border: 1px solid rgba(255, 255, 255, 0.043);
-     padding: 12px;
-     width: 100%;
- }
- input:hover{
-     border: 1px solid #008000;
- }
- .your_mail button{
-     background-color: #008000;
-     border: none;
-     font-weight: bold;
-     color: white;
-     padding: 12px 24px;
-     border-radius: 32px;
-     width: 70%;
-     align-items: center;
-     margin: auto;
- 
- }
- footer hr{
+    
+
+}
+.company_details p{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #9EA2AD;
+    letter-spacing: -0.08px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+.info p{
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 32px;
+    padding: 12px;
+}
+.your_mail{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+.your_mail p{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+form{
+    background-color: black;
+    
+    
+}
+input{
+    background-color: black;
+    border: 1px solid rgba(255, 255, 255, 0.043);
+    padding: 12px;
+    width: 100%;
+}
+input:hover{
+    border: 1px solid #008000;
+}
+.your_mail a{
     background-color: #008000;
-    height: 1px;
     border: none;
- }
- .third_column{
-     margin-top: 56px;
-     display: flex;
-     flex-direction: column;
-     gap: 48px;
- 
- }
- .third_column .icons{
-     display: flex;
-     flex-direction: row;
-     gap: 24px;
-     width: 100%;
- }
- .third_column .items{
-     display: flex;
-     flex-direction: row;
-     width: 100%;
-     justify-content: space-between;
- 
-     
- }
- 
- .third_column .products a{
-   display: flex;
-   flex-direction: column;
-   gap: 8px;
-   text-decoration: none;
-   color:#9EA2AD;
-   list-style: none;
-   font-family: "Inter", sans-serif;
-   font-size: 14px;
-   font-weight: 300;
- }
- .third_column .products li{
-     list-style: none;
-     font-size: 14px;
-     margin: 20px auto;
- }
- .third_column .products h3{
-     margin-bottom: 12px;
-     font-family: "Inter", sans-serif;
-     font-size: 14px;
- }
- .fourth_column{
-     font-family: "Inter", sans-serif;
-     font-size: 14px;
-     margin-top: 56px;
-     justify-content: left;
-     text-align: left;
-     font-weight: 200;
- 
- }
- }
+    font-weight: bold;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 32px;
+    width: 70%;
+    margin: auto;
+    transition: all 1s ease;
+    cursor:pointer;
+    text-decoration: none;
+    justify-content: center;
+    font-family: "Archivo", sans-serif;
+    font-family: 14px;
+    align-items: center;
+    place-items: center;
+
+}
+footer hr{
+   background-color: #008000;
+   height: 1px;
+   border: none;
+}
+.third_column{
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+}
+.third_column .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+}
+.third_column .items{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    
+}
+
+.third_column .products a{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color:#9EA2AD;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.third_column .products li{
+    list-style: none;
+    font-size: 14px;
+    margin: 20px auto;
+}
+.third_column .products h3{
+    margin-bottom: 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+.fourth_column{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    margin-top: 56px;
+    justify-content: left;
+    text-align: left;
+    font-weight: 200;
+
+}
+}
+
+
+
+
+
